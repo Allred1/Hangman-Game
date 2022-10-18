@@ -9,17 +9,10 @@ class WordBank {
     Random generator = new Random();
     
 
-
-
     public string DrawRandomWord() {
         int randomIndex = generator.Next(words.Count);
         string randomWord = words[randomIndex];
         words.RemoveAt(randomIndex);
         return randomWord;
-
-        System.Console.WriteLine(randomWord);
-    }
-
-    
-    
+    }    
 }

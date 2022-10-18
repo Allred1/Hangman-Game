@@ -1,7 +1,12 @@
 
 
+
 class Jumper {
     static void Main(string[] args) {
-        Console.WriteLine("This is a test!");
+        // instantiating class "WordBank"
+        var WordBank = new WordBank(); 
+
+        
+        Console.WriteLine(WordBank.DrawRandomWord());
     }
 }
