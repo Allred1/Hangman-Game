@@ -1,32 +1,30 @@
 // Class Guess
 
 class Guess {
-    var Player = new Player();
-    var WordBank = new WordBank();
+    Player player = new Player();
+    WordBank wordBank = new WordBank();
     
     
-    public bool correctLetter() {
-        // bool correct = false;
-        string letter = Player.guessletter();
-        string word = WordBank.DrawRandomWord();
-
-        // is the letter in the word?
-        bool answer = word.Contains(letter);
-        Console.WriteLine(answer);
-
+    public string correctLetter() {
         // take Player's letter guess
         // take WordBank's random word
+        string letter = player.guessLetter();
+        string word = wordBank.DrawRandomWord();
+
         // compare if the guessletter is in the randomword
-            // if true: display the letter
-            // if false: parachute line is cute
+        bool answer = word.Contains(letter);
+    
+        // if true: display the letter
+        // if false: parachute line is cut
+        string message;
 
-
-        // if (!correct) {
-        //     Console.WriteLine(Player.guessLetter());
-        // } 
-        // else {
-        //     Console.WriteLine(" ");
-        // }
-        
+        if (answer == true) {
+            message = letter;
+            return message;
+        } 
+        else {
+            message = "Try again!";
+            return message;
+        }        
     }
 }
