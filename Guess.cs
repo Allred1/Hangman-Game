@@ -5,13 +5,14 @@ class Guess {
     var WordBank = new WordBank();
     
     
-    public bool correctLetter(Player other) {
-        bool correct = false;
+    public bool correctLetter() {
+        // bool correct = false;
         string letter = Player.guessletter();
         string word = WordBank.DrawRandomWord();
 
         // is the letter in the word?
-        if ()
+        bool answer = word.Contains(letter);
+        Console.WriteLine(answer);
 
         // take Player's letter guess
         // take WordBank's random word
@@ -20,12 +21,12 @@ class Guess {
             // if false: parachute line is cute
 
 
-        if (!correct) {
-            Console.WriteLine(Player.guessLetter());
-        } 
-        else {
-            Console.WriteLine(" ");
-        }
+        // if (!correct) {
+        //     Console.WriteLine(Player.guessLetter());
+        // } 
+        // else {
+        //     Console.WriteLine(" ");
+        // }
         
     }
 }
