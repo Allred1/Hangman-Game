@@ -4,10 +4,10 @@
 class Jumper {
     static void Main(string[] args) {
         // instantiating classes
-        var WordBank = new WordBank(); 
+        // var WordBank = new WordBank(); 
         // var Player = new Player();
         var Guess = new Guess();
-        var Parachute = new Parachute();
+        // var Parachute = new Parachute();
         
         // Console.WriteLine(WordBank.DrawRandomWord());
         // Console.WriteLine(Player.guessLetter());
@@ -17,8 +17,8 @@ class Jumper {
         
         // Console.WriteLine(Guess.correctLetter());
 
-        Console.WriteLine(WordBank.DrawRandomWord());
-        Console.WriteLine(WordBank.wordLength());
+   
+        Console.WriteLine(Guess.correctLetter());
 
         
 

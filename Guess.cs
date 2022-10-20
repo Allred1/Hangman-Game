@@ -5,11 +5,15 @@ class Guess {
     WordBank wordBank = new WordBank();
 
 
+    // see if the guessed letter was in the random word
+    // if correct, print the letter
+    // if incorrect, print "Try again!"
     public string correctLetter() {
-        // take Player's letter guess
-        // take WordBank's random word
-        string letter = player.guessLetter();
         string word = wordBank.DrawRandomWord();
+        int length = wordBank.wordLength(word);
+        string letter = player.guessLetter();
+        
+        Console.WriteLine(length);
 
         // compare if the guessletter is in the randomword
         bool answer = word.Contains(letter);

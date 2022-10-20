@@ -4,7 +4,7 @@
 
 class WordBank {
 
-    WordBank wordBank = new WordBank();
+    // WordBank wordBank = new WordBank();
 
     // create a list of words
     List<string> words = new List<string> {"Mordor", "Rohan", "Gondor", "Gandalf", "Frodo", "Aragorn", "Legolas", "Gimli", "Castle", "Ringwraith", "Theoden", "Eomer"};
@@ -20,10 +20,11 @@ class WordBank {
         return randomWord;
     }    
 
-    // return the length of the word (int)
-    public int wordLength() {
-        string word = wordBank.DrawRandomWord();
-        int length = word.Length;
+
+    // returns the length of the random word (when passed through the parameter)
+    public int wordLength(string randomWord) {
+        Console.WriteLine(randomWord);
+        int length = randomWord.Length;
         return length;
     }
     
