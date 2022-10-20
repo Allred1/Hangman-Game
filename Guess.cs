@@ -13,7 +13,7 @@ class Guess {
         int length = wordBank.wordLength(word);
         string letter = player.guessLetter();
         
-        Console.WriteLine(length);
+        Console.WriteLine(length);            
 
         // compare if the guessletter is in the randomword
         bool answer = word.Contains(letter);
@@ -28,5 +28,6 @@ class Guess {
             message = "Try again!";
             return message;
         }        
-    }
+    }    
 }
+

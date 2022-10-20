@@ -27,5 +27,4 @@ class WordBank {
         int length = randomWord.Length;
         return length;
     }
-    
 }

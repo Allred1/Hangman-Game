@@ -1,14 +1,18 @@
 // Class Parachute
 
-// class Parachute {
+class Parachute {
 
     // display the word at top (with each letter that's guessed correctly)
     // display lines of parachute
     // display the guy and the ground
-    
-    
-    // Guess guess = new Guess();
 
+    Guess guess = new Guess();
+
+    public string displayWord() {
+        Console.WriteLine(guess.correctLetter());
+        string test = "testing";
+        return test;
+    }
 
     // public string displayWord() {
     //     // length of the word
@@ -27,4 +31,4 @@
 
     // if all lines are cut, replace the head with x (END the GAME)
     
-// }
+}
