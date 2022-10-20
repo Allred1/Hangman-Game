@@ -3,8 +3,8 @@
 class Guess {
     Player player = new Player();
     WordBank wordBank = new WordBank();
-    
-    
+
+
     public string correctLetter() {
         // take Player's letter guess
         // take WordBank's random word
@@ -17,12 +17,10 @@ class Guess {
         // if true: display the letter
         // if false: parachute line is cut
         string message;
-
         if (answer == true) {
             message = letter;
             return message;
-        } 
-        else {
+        } else {
             message = "Try again!";
             return message;
         }        

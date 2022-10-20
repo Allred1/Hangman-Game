@@ -6,15 +6,16 @@ class Parachute {
     // display lines of parachute
     // display the guy and the ground
     
-    WordBank wordBank = new WordBank();
+    
+    Guess guess = new Guess();
 
 
     public string displayWord() {
         // length of the word
         // print " _ " for each letter
+        string word = "just testing";
 
-        // string word = wordBank.DrawRandomWord();
-        int wordLength = word.Length;
+        int wordLength = guess.wordLength();
         // for each letter in the word, print an underscore
         return word;
 
