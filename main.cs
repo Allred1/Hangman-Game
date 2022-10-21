@@ -1,34 +1,30 @@
 
-
-
 class Jumper {
     static void Main(string[] args) {
         // instantiating classes
         var WordBank = new WordBank(); 
-        // var Player = new Player();
-        var Guess = new Guess();
-        var Parachute = new Parachute();
-        
-        // Console.WriteLine(WordBank.DrawRandomWord());
-        // Console.WriteLine(Player.guessLetter());
+        var Compare = new Compare();
+        var Player = new Player();
 
 
-        // Console.WriteLine(Parachute.displayWord());
-        
-        // Console.WriteLine(Guess.correctLetter());
+        Console.Write("Play game? [y/n]: ");
+        string answer = Console.ReadLine();
 
-   
-        // Console.WriteLine(Guess.correctLetter());
-        // Console.WriteLine(Parachute.displayWord());
-
-
-
-
+        // play game while user says "y" (yes)
+        while (answer == "y") {
+            string word = WordBank.DrawRandomWord();
+            // start out with 8 lives
+            int lives = 8; 
+            
+            // continue game until win or run out of lives
+            while (lives != 0) {
+                string letter = Player.guessLetter();
+                Compare.letterInWord(word, letter);
 
 
 
-        
-
-
+            }
+        }
     }
 }
+
