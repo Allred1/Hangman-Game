@@ -3,10 +3,13 @@ class Display {
 
     // method to display the word as underscores and each letter as it's guessed
     // takes length (of the word) as a parameter
-    public string displayWord(string word) {
+    public void displayWord(string word) {
         int length = wordBank.getLength(word);
+        Console.WriteLine(word);
+        for ()
 
-        return null;
+
+        // return null;
     }
 
     // method to display the parachuting man
