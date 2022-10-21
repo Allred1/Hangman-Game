@@ -51,27 +51,27 @@ class Display {
         guy.Add("line8",  "^^^^^^^");
 
 
-        // change the parachute image according to wrong 
-        if (lives == 8) {
-            // don't change the image
-        } else if (lives == 7) {
-            parachute.Remove("line1");
-        } else if (lives == 6) {
-            parachute["line2"] = @" /   \ ";
-        } else if (lives == 5) {
-            parachute["line2"] = @"     \ ";
-        } else if (lives == 4) {
-            parachute.Remove("line2");
-        } else if (lives == 3) {
-            parachute["line3"] = @"     / ";
-        } else if (lives == 2) {
-            parachute.Remove("line3");
-        } else if (lives == 1) {
-            parachute["line4"] = @"    /  ";
-        } else {
-            parachute.Remove("line4");
-            gameOver();
-        } 
+        // // change the parachute image according to how many lives left
+        // if (lives == 8) {
+        //     // don't change the image
+        // } else if (lives == 7) {
+        //     parachute.Remove("line1");
+        // } else if (lives == 6) {
+        //     parachute["line2"] = @" /   \ ";
+        // } else if (lives == 5) {
+        //     parachute["line2"] = @"     \ ";
+        // } else if (lives == 4) {
+        //     parachute.Remove("line2");
+        // } else if (lives == 3) {
+        //     parachute["line3"] = @"     / ";
+        // } else if (lives == 2) {
+        //     parachute.Remove("line3");
+        // } else if (lives == 1) {
+        //     parachute["line4"] = @"    /  ";
+        // } else {
+        //     parachute.Remove("line4");
+        //     gameOver();
+        // } 
 
 
         // display the parachute
