@@ -1,7 +1,6 @@
 class Player {
 
-    int lives = 8;
-
+    
     // user guesses a letter, returns letter
     public string guessLetter() {
         Console.Write("Guess a letter: ");

@@ -8,15 +8,19 @@ class Compare {
 
     // check if guessed letter is in word
     // Takes 2 parameters: word & letter
-    public string letterInWord(string word, string letter) {
-        bool answer = word.Contains(letter);
+    public bool letterInWord(string word, string letter) {
+        return word.Contains(letter);          
+    }
 
-        if (answer == true) {
-            string message = letter;
-            return message;
-        } else {
+    // take action depeding on whether there was a letter in the word or not
+    // Has 2 parameters: bool answer (after determining "letterInWord") and the letter. 
+    public string correctOrIncorrect(bool letterInWord, string letter) {
+        if (letterInWord == true) {
+            return letter;
+        } 
+        else {
             string message = "Try again!";
             return message;
-        }   
+        } 
     }    
 }

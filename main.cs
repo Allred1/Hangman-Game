@@ -5,6 +5,7 @@ class Jumper {
         var WordBank = new WordBank(); 
         var Compare = new Compare();
         var Player = new Player();
+        var Display = new Display();
 
 
         Console.Write("Play game? [y/n]: ");
@@ -19,7 +20,8 @@ class Jumper {
             // continue game until win or run out of lives
             while (lives != 0) {
                 string letter = Player.guessLetter();
-                Compare.letterInWord(word, letter);
+                bool letterInWord = Compare.letterInWord(word, letter);
+                Compare.correctOrIncorrect(letterInWord, letter);
 
 
 
