@@ -1,7 +1,7 @@
 class WordBank {
 
     // word bank
-    List<string> words = new List<string> {"Mordor", "Rohan", "Gondor", "Gandalf", "Frodo", "Aragorn", "Legolas", "Gimli", "Castle", "Ringwraith", "Theoden", "Eomer"};
+    List<string> words = new List<string> {"mordor", "rohan", "gondor", "gandalf", "frodo", "aragorn", "legolas", "gimli", "castle", "ringwraith", "theoden", "eomer"};
     
     // random generator
     Random generator = new Random();

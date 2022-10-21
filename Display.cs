@@ -1,5 +1,6 @@
 class Display {
     WordBank wordBank = new WordBank();
+    Compare compare = new Compare();
 
     // method to display the word as underscores and each letter as it's guessed
     // takes length (of the word) as a parameter
@@ -32,14 +33,14 @@ class Display {
 
 
     // method to display the parachuting man
-    public void displayParachuteGuy() {
+    public void createParachuteGuy(int lives) {
         // create parachute dictionary with its elements
         Dictionary<string, string> parachute = new Dictionary<string, string>(4);
 
         parachute.Add("line1",  "  ___  ");
         parachute.Add("line2", @" /___\ ");
         parachute.Add("line3", @" \   / ");
-        parachute.Add("line4", @"  \ /  ");
+        parachute.Add("line4", @"  \ /  ");    
 
         // create guy dictionary with its elements
         Dictionary<string, string> guy = new Dictionary<string, string>(4);
@@ -47,7 +48,31 @@ class Display {
         guy.Add("line5",  "   o   ");
         guy.Add("line6", @"  /|\  ");
         guy.Add("line7", @"  / \  ");
-        guy.Add("line8", "^^^^^^^");
+        guy.Add("line8",  "^^^^^^^");
+
+
+        // change the parachute image according to wrong 
+        if (lives == 8) {
+            // don't change the image
+        } else if (lives == 7) {
+            parachute.Remove("line1");
+        } else if (lives == 6) {
+            parachute["line2"] = @" /   \ ";
+        } else if (lives == 5) {
+            parachute["line2"] = @"     \ ";
+        } else if (lives == 4) {
+            parachute.Remove("line2");
+        } else if (lives == 3) {
+            parachute["line3"] = @"     / ";
+        } else if (lives == 2) {
+            parachute.Remove("line3");
+        } else if (lives == 1) {
+            parachute["line4"] = @"    /  ";
+        } else {
+            parachute.Remove("line4");
+            gameOver();
+        } 
+
 
         // display the parachute
         foreach (KeyValuePair<string, string> line in parachute) {
@@ -58,6 +83,33 @@ class Display {
         foreach (KeyValuePair<string, string> line in guy) {
             Console.WriteLine(line.Value);
         }
-
     }
+
+
+    // game over message if no lives left
+    public void gameOver() {
+        Console.WriteLine("You died! Game over.");
+    }
+
+    // // update the visual (for when a parachute line has been cut)
+    // public void updateImage() {
+    //     Compare compare = new Compare();
+
+
+
+    //     // display the parachute
+    //     foreach (KeyValuePair<string, string> line in parachute) {
+    //         Console.WriteLine(line.Value);
+    //     }
+
+    //     // display the guy
+    //     foreach (KeyValuePair<string, string> line in guy) {
+    //         Console.WriteLine(line.Value);
+    //     }
+    // }
+
+
+    // note to self: 
+    // all that's left to do is display the word/letters the right way
+    // and update the parachute according to incorrect guesses
 }

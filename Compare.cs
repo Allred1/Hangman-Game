@@ -18,16 +18,16 @@ class Compare {
     public string correctOrIncorrect(bool letterInWord, string letter, string word, int lives) {
         // call the display word method here
         display.displayWord(word, letter);
-        display.displayParachuteGuy();
-        
+                
         if (letterInWord == true) {
+            // display.createParachuteGuy(lives);
             // make the letter appear over its underscore
             return letter;
         } 
         else {
-            // call the loseLife method
-            string message = "Try again!";
-            return message;
+            // display.createParachuteGuy(lives);
+            // call the update the parachute visual
+            return "Try again!";
         } 
     }    
 }
