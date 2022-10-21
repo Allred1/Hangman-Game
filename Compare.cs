@@ -16,10 +16,13 @@ class Compare {
     // Has 2 parameters: bool answer (after determining "letterInWord") and the letter. 
     public string correctOrIncorrect(bool letterInWord, string letter) {
         if (letterInWord == true) {
-            return letter;
+            string message = letter;
+            // Console.WriteLine("Testing if");
+            return message;
         } 
         else {
             string message = "Try again!";
+            // Console.WriteLine("Testing else");
             return message;
         } 
     }    

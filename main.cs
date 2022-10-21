@@ -9,7 +9,7 @@ class Jumper {
 
 
         Console.Write("Play game? [y/n]: ");
-        string answer = Console.ReadLine();
+        string answer = Console.ReadLine() ?? "";
 
         // play game while user says "y" (yes)
         while (answer == "y") {
@@ -19,9 +19,13 @@ class Jumper {
             
             // continue game until win or run out of lives
             while (lives != 0) {
+                Console.WriteLine(word); // temporarily see the word (for testing purposes)
+                // get the player's letter guess
                 string letter = Player.guessLetter();
+                // check if it's in the random word
                 bool letterInWord = Compare.letterInWord(word, letter);
-                Compare.correctOrIncorrect(letterInWord, letter);
+                // deal with the following conditions 
+                Console.WriteLine(Compare.correctOrIncorrect(letterInWord, letter));
 
 
 
