@@ -17,7 +17,8 @@ class Compare {
     // Has 4 parameters: bool answer (after determining "letterInWord"), the letter, the actual random word, and the number of lives. 
     public string correctOrIncorrect(bool letterInWord, string letter, string word, int lives) {
         // call the display word method here
-        display.displayWord(word);
+        display.displayWord(word, letter);
+        
         if (letterInWord == true) {
             // make the letter appear over its underscore
             return letter;

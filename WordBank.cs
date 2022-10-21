@@ -17,7 +17,6 @@ class WordBank {
 
     // returns the length of the random word (when passed through the parameter)
     public int getLength(string randomWord) {
-        Console.WriteLine(randomWord);
         int length = randomWord.Length;
         return length;
     }
