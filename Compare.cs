@@ -18,6 +18,7 @@ class Compare {
     public string correctOrIncorrect(bool letterInWord, string letter, string word, int lives) {
         // call the display word method here
         display.displayWord(word, letter);
+        display.displayParachuteGuy();
         
         if (letterInWord == true) {
             // make the letter appear over its underscore
