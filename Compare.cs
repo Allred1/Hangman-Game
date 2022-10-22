@@ -15,19 +15,21 @@ class Compare {
 
     // take action depeding on whether there was a letter in the word or not
     // Has 4 parameters: bool answer (after determining "letterInWord"), the letter, the actual random word, and the number of lives. 
-    public string correctOrIncorrect(bool letterInWord, string letter, string word, int lives) {
+    public string correctOrIncorrect(bool letterInWord, string letter, string word, int updateLives) {
         // call the display word method here
         display.displayWord(word, letter);
                 
         if (letterInWord == true) {
-            // display.createParachuteGuy(lives);
+            display.createParachuteGuy(updateLives);
             // make the letter appear over its underscore
             return letter;
         } 
         else {
-            // display.createParachuteGuy(lives);
+            updateLives = player.loseLife(updateLives);
+            display.createParachuteGuy(updateLives);
             // call the update the parachute visual
-            return "Try again!";
+            return updateLives + "Try again!";
         } 
+        
     }    
 }

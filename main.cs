@@ -6,7 +6,8 @@ class Jumper {
         var Compare = new Compare();
         var Player = new Player();
         var Display = new Display();
-
+        // start out with 8 lives
+        int lives = 8;
 
         Console.Write("Play game? [y/n]: ");
         string answer = Console.ReadLine() ?? "";
@@ -15,7 +16,7 @@ class Jumper {
         while (answer == "y") {
             string word = WordBank.DrawRandomWord();
             // start out with 8 lives
-            int lives = 8; 
+            // int lives = 8; 
             
             // continue game until win or run out of lives
             while (lives != 0) {

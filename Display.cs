@@ -1,6 +1,5 @@
 class Display {
     WordBank wordBank = new WordBank();
-    Compare compare = new Compare();
 
     // method to display the word as underscores and each letter as it's guessed
     // takes length (of the word) as a parameter
@@ -33,7 +32,7 @@ class Display {
 
 
     // method to display the parachuting man
-    public void createParachuteGuy(int lives) {
+    public void createParachuteGuy(int updateLives) {
         // create parachute dictionary with its elements
         Dictionary<string, string> parachute = new Dictionary<string, string>(4);
 
@@ -51,27 +50,29 @@ class Display {
         guy.Add("line8",  "^^^^^^^");
 
 
-        // // change the parachute image according to how many lives left
-        // if (lives == 8) {
-        //     // don't change the image
-        // } else if (lives == 7) {
-        //     parachute.Remove("line1");
-        // } else if (lives == 6) {
-        //     parachute["line2"] = @" /   \ ";
-        // } else if (lives == 5) {
-        //     parachute["line2"] = @"     \ ";
-        // } else if (lives == 4) {
-        //     parachute.Remove("line2");
-        // } else if (lives == 3) {
-        //     parachute["line3"] = @"     / ";
-        // } else if (lives == 2) {
-        //     parachute.Remove("line3");
-        // } else if (lives == 1) {
-        //     parachute["line4"] = @"    /  ";
-        // } else {
-        //     parachute.Remove("line4");
-        //     gameOver();
-        // } 
+        // change the parachute image according to how many lives left
+        if (updateLives == 8) {
+            // don't change the image
+        } else if (updateLives == 7) {
+            parachute.Remove("line1");
+        } else if (updateLives == 6) {
+            parachute.Remove("line2");
+            parachute.Add("line2", @" /   \ " );
+            // parachute["line2"] = @" /   \ ";
+        } else if (updateLives == 5) {
+            parachute["line2"] = @"     \ ";
+        } else if (updateLives == 4) {
+            parachute.Remove("line2");
+        } else if (updateLives == 3) {
+            parachute["line3"] = @"     / ";
+        } else if (updateLives == 2) {
+            parachute.Remove("line3");
+        } else if (updateLives == 1) {
+            parachute["line4"] = @"    /  ";
+        } else {
+            parachute.Remove("line4");
+            gameOver();
+        } 
 
 
         // display the parachute
