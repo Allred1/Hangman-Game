@@ -3,8 +3,9 @@ class Player {
     
     // user guesses a letter, returns letter
     public string guessLetter() {
-        Console.Write("Guess a letter: ");
-        string letter = Console.ReadLine() ?? "";
+        Console.Write("Guess a letter [a-z]: ");
+        string letter = Console.ReadLine();
+        // char letter = char.Parse(Console.ReadLine());
         return letter;
     }
 
