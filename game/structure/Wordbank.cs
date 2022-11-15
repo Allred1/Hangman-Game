@@ -1,10 +1,10 @@
 class WordBank {
 
     // word bank
-    List<string> words = new List<string> {"mordor", "rohan", "gondor", "gandalf", "frodo", "aragorn", "legolas", "gimli", "castle", "ringwraith", "theoden", "eomer"};
+    private List<string> words = new List<string> {"mordor", "rohan", "gondor", "gandalf", "frodo", "aragorn", "legolas", "gimli", "castle", "ringwraith", "theoden", "eomer"};
     
     // random generator
-    Random generator = new Random();
+    private Random generator = new Random();
 
 
     // draw a random word from the word bank
